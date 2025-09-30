@@ -37,6 +37,7 @@ module circ_de_square(radius, $fn=20) {
 }
 
 module cylinder_de_square(h,r1,r2,center=false) {
+    r2 = r2 == undef ? 1 : r2;
     scale = r1 != 0 ? r2/r1 : r1/r2;
     base = r1 != 0 ? r1 : r2;
     flip = r1 == 0;
